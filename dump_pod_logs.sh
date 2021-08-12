@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOT_OUTPUT_DIR="/tmp"
-OUTPUT_DIR_NAME="$(kubectl config current-context)_$(date +%s)"
+OUTPUT_DIR_NAME="pod_logs_$(kubectl config current-context)_$(date +%s)"
 OUTPUT_DIR="${ROOT_OUTPUT_DIR}/${OUTPUT_DIR_NAME}"
 EXTENSION="log"
 echo "Using output dir $OUTPUT_DIR"
