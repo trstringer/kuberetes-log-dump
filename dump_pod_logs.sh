@@ -35,7 +35,11 @@ TARBALL_FILE_NAME="${OUTPUT_DIR_NAME}.tar.gz"
 tar -czvf "./${TARBALL_FILE_NAME}" "./${OUTPUT_DIR_NAME}"
 mv "./${TARBALL_FILE_NAME}" "$OUTPUT_DIR"
 
+echo
 echo "Files located at $OUTPUT_DIR"
 echo "Tarball located at ${OUTPUT_DIR}/${TARBALL_FILE_NAME}"
+echo
+echo "Search for errors:"
+echo "  $ grep -Ei \"fail|err\" ${OUTPUT_DIR}/*.log"
 
 cd "$CWD" || exit 1
